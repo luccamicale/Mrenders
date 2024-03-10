@@ -10,6 +10,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
+    /* opacity: 0.6; */
     z-index: -1; /* Coloca la imagen de fondo detrás de todo el contenido */
 }
 
@@ -17,7 +18,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.5); /* Cambia el color de fondo según tus preferencias */
+    background-color: rgba(0, 0, 0, 0.5); 
     padding: 10px 20px;
     position: fixed;
     width: 98%;
@@ -43,22 +44,45 @@ body {
 }
 
 .menu li a {
+    position: relative;
     display: inline-block;
-    padding: 10px 20px; /* Ajusta el relleno para controlar el tamaño del botón */
+    padding: 10px 20px;
     color: white;
     text-decoration: none;
-    font-size: 16px;
-    border: 2px solid transparent; /* Agrega un borde transparente */
-    border-radius: 5px; /* Agrega un borde redondeado */
-    transition: all 0.3s ease; /* Agrega una transición suave */
+    font-size: 22px;
+    /* border: 2px solid transparent; */
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.menu li.active a::after {
+    content: ''; /* Agrega un contenido vacío */
+    position: absolute;
+    left: 50%;
+    bottom: -3px; /* Ajusta la distancia de la línea desde la parte inferior */
+    width: 80px; /* Ancho de la línea */
+    height: 3px; /* Altura de la línea */
+    background-color: white; /* Color de la línea */
+    transform: translateX(-50%); /* Centra la línea horizontalmente */
+    transition: width 0.3s ease; /* Transición suave para el efecto */
 }
 
 .menu li a:hover {
-    background-color: #333; /* Cambia el color de fondo al pasar el mouse sobre los enlaces */
-    border-color: #fff; /* Cambia el color del borde al pasar el mouse sobre los enlaces */
-    border-radius: 0; /* Hace que el borde sea cuadrado */
-    padding: 12px 24px; /* Ajusta el relleno para hacer que el botón sea más grande */
+
+    border-color: #fff;
+    border-radius: 0;
+    padding: 12px 24px;
 }
+
+.menu li:hover a::after {
+    width: 0; /* Oculta la línea cuando no se presiona */
+}
+
+.menu li:hover.active a::after {
+    width: 50px; /* Ancho de la línea al presionar */
+}
+
+
 
 
 /* Estilos adicionales para hacer el menú responsive */
@@ -71,4 +95,77 @@ body {
     .menu {
         margin-top: 10px; /* Espacio entre el texto y los botones en dispositivos pequeños */
     }
+}
+
+.section_Home_title {
+  display: flex;
+  margin-top: 15%;
+  margin-left: 10%;
+  flex-direction: column;
+}
+
+.Title {
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: 84px;
+        font-weight: bold;
+        text-align: center;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    width: 70%;
+}
+
+.Description_home {
+  width: 80%;
+  font-size: 22px;
+  color: black;
+  margin-left: 9%;
+  margin-top: 5%;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.Button_see_gallery {
+  border: 1px solid #fff;
+  padding: 10px;
+  background-color: #333;
+  color: white;
+  font-size: 20px;
+  width: 12%;
+  margin-left: 9%;
+  margin-top: 5%;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+  }
+  
+  .Button_see_gallery {
+    border: none;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    border: 1px solid white;
+    /* border-radius: 5px; */
+    animation: pulse 1s infinite; /* Aplica la animación de pulsación */
+    transition: background-color 0.3s ease; /* Transición suave para el color de fondo */
+  }
+  
+  .Button_see_gallery:hover {
+    background-color: white;
+    color: #333;
+    animation: none; /* Detiene la animación al pasar el mouse sobre el botón */
+  }
+  
+  .additional-content {
+    padding: 20px; /* Ajusta el relleno según sea necesario */
+    color: black;
+    font-size: 18px;
+    /* Otros estilos */
 }
