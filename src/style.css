@@ -1,22 +1,26 @@
+body {
+  background-color: #e8e8e7;
+}
+
 .background {
-  width: 100.9%;
+  width: 95%;
   height: 950px;
   margin-top: -10px;
   margin-left: -10px;
   overflow-x: hidden;
-
+  
 }
 
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.5); 
+    background-color: #e8e8e7; 
     padding: 10px 20px;
     width: 99%;
     margin-top: -952px;
     position: fixed;
-    margin-left: -10px;
+    margin-left: -70px;
     z-index: 1000; /* Asegura que el menú esté por delante del contenido */
 }
 
@@ -24,6 +28,8 @@
 .brand {
     color: white; /* Cambia el color del texto según tus preferencias */
     font-size: 30px;
+    margin-left: 95px;
+    color: #333;
 }
 
 .menu {
@@ -43,7 +49,7 @@
     position: relative;
     display: inline-block;
     padding: 10px 20px;
-    color: white;
+    color: #333;
     text-decoration: none;
     font-size: 22px;
     /* border: 2px solid transparent; */
@@ -56,9 +62,9 @@
     position: absolute;
     left: 50%;
     bottom: -3px; /* Ajusta la distancia de la línea desde la parte inferior */
-    width: 80px; /* Ancho de la línea */
+    width: 70px; /* Ancho de la línea */
     height: 3px; /* Altura de la línea */
-    background-color: white; /* Color de la línea */
+    background-color: #333; /* Color de la línea */
     transform: translateX(-50%); /* Centra la línea horizontalmente */
     transition: width 0.3s ease; /* Transición suave para el efecto */
 }
@@ -94,10 +100,7 @@
 }
 
 .section_Home_title {
-  display: flex;
-  margin-top: -30%;
-  margin-left: 10%;
-  flex-direction: column;
+
 }
 
 .Title {
@@ -115,12 +118,15 @@
 }
 
 .Description_home {
-  width: 80%;
-  font-size: 22px;
-  color: black;
-  margin-left: 9%;
-  margin-top: 5%;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  display: flex;
+  text-align: center;
+  width: 19%;
+  font-size: 21px;
+  color: #333;
+  margin-left: 41.5%;
+  margin-top: -750px;
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
 }
 
 .Button_see_gallery {
@@ -170,5 +176,5 @@
 
 
   .about-me {
-    margin-top: 200px;
+    margin-top: 700px;
   }
