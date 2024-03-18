@@ -4,8 +4,8 @@ body {
 
 .background {
   width: 95%;
-  height: 950px;
-  margin-top: -10px;
+  height: 1100px;
+  margin-top: 10px;
   margin-left: -10px;
   overflow-x: hidden;
   
@@ -18,8 +18,8 @@ body {
     background-color: #e8e8e7; 
     padding: 10px 20px;
     width: 99%;
-    margin-top: -952px;
-    position: fixed;
+    margin-top: -1120px;
+    position: absolute;
     margin-left: -70px;
     z-index: 1000; /* Asegura que el menú esté por delante del contenido */
 }
@@ -27,7 +27,7 @@ body {
 
 .brand {
     color: white; /* Cambia el color del texto según tus preferencias */
-    font-size: 30px;
+    font-size: 20px;
     margin-left: 95px;
     color: #333;
 }
@@ -51,7 +51,7 @@ body {
     padding: 10px 20px;
     color: #333;
     text-decoration: none;
-    font-size: 22px;
+    font-size: 17px;
     /* border: 2px solid transparent; */
     border-radius: 5px;
     transition: all 0.3s ease;
@@ -99,9 +99,7 @@ body {
     }
 }
 
-.section_Home_title {
 
-}
 
 .Title {
     
@@ -121,10 +119,10 @@ body {
   display: flex;
   text-align: center;
   width: 19%;
-  font-size: 21px;
+  font-size: 17px;
   color: #333;
   margin-left: 41.5%;
-  margin-top: -750px;
+  margin-top: -850px;
   font-family: 'Courier New', Courier, monospace;
   text-align: center;
 }
@@ -173,8 +171,241 @@ body {
     /* Otros estilos */
 }
 
-
-
-  .about-me {
-    margin-top: 700px;
+  img {
+    width: 100%;
   }
+
+  .container {
+    position: relative;
+    display: inline-block;
+    overflow: hidden; /* Esto asegurará que el pseudo-elemento no se desborde */
+  }
+  
+  img {
+    width: 100%;
+    display: block;
+  }
+  
+  .container::before {
+    content: "Open +";
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 85%;
+    height: 85%;
+    background-color: rgba(20, 20, 20, 0.5);
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+  }
+  
+  .container:hover::before {
+    opacity: 1;
+  }
+  
+  
+
+  .row {
+    display: flex;
+    padding-inline-start: 5px;
+    
+
+  }
+
+  .column {
+    flex: 45%;
+    padding: 7px;
+  }
+
+  .column img {
+    margin-top: 1px;
+  }
+
+  @media (max-width: 500px) {
+    .column {
+      flex: 50%;
+    }
+    .row {
+      flex-wrap: wrap;
+    }
+  }
+
+  @media (max-width: 900px) {
+    .column {
+      flex: 33%;
+    }
+    .row {
+      flex-wrap: wrap;
+    }
+
+    .img {
+      width: 10%;
+    }
+  }
+
+  .Text_Gallery {
+    color: #343a40;
+    font-size: 65px;
+    text-align: left;
+    margin-top: 40px;
+  }
+
+  .text_description {
+    font-size: 15px;
+    color: gray;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+
+  .Button_show_more {
+    background-color: transparent;
+    padding: 17px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: transparent;
+    width: 180px;
+    transition: width 0.5s ease, background-color 0.5s ease;
+  }
+
+  .div_button_show {
+     background-color: transparent;
+     border: 1px solid gray;
+     width: 90px;
+     margin-top: 20px;
+     transition: width 0.5s ease, background-color 0.5s ease;
+  }
+
+  .div_button_show:hover{
+    width: 180px;
+    background-color: #343a40;
+    
+  }
+
+  .Button_show_more:hover{
+    color: white;
+  }
+
+  /* @media (max-width: 520px) {
+    .section_Portfolio {
+      margin-left: 250px;
+    }
+  } */
+
+
+  .title_services {
+    color: #343a40;
+    font-size: 75px;
+    text-align: left;
+    margin-top: 60px;
+    margin-left: 2%;
+  }
+
+  .learn_more {
+    font-size: 15px;
+    color: #343a40;
+    margin-top: 90px;
+  }
+
+  .div_title_services {
+    display: flex;
+    gap: 70%;
+  }
+
+  
+  .div_main_container_services {
+    display: flex;
+  }
+
+  .img_services {
+    height: 300px;
+  }
+
+  @media (max-width: 1200px) {
+    .div_main_container_services {
+      display: flex;
+      flex-direction: column;
+
+    }
+
+    .div_container_services {
+      width: 80%;
+      height: 850px;
+    }
+
+    .img_services {
+      height: 850px;
+    }
+  }
+
+  @media (max-width: 850px) {
+    .div_container_services {
+      width: 40%;
+      height: 400px;
+    }
+
+    .img_services {
+      height: 400px;
+    }
+  }
+  
+  .div_container_services {
+    width: 100%;
+    padding: 2.5%;
+    position: relative; /* Agregamos posición relativa */
+  }
+
+
+  .div_container_services::after {
+    content: ""; /* Agregamos un pseudo-elemento */
+    position: absolute; /* Posicionamos el pseudo-elemento */
+    top: 40px;
+    right: -1px; /* Ajustamos la posición para que la línea esté a la derecha de la tarjeta */
+    height: 80%; /* La altura de la línea será igual a la altura de la tarjeta */
+    width: 0.5px; /* Ancho de la línea */
+    background-color: #adb5bd; /* Color de la línea */
+}
+
+/* Opcional: ajusta el margen para que la línea no aparezca en la última tarjeta */
+.div_container_services:last-child::after {
+    display: none;
+}
+  
+  .div_container_services::before {
+    content: attr(data-text); /* Agregamos un pseudo-elemento */
+    font-size: 17px;
+    color: #343a40;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    transition: opacity 0.8s ease;
+    display: flex;
+    font-weight: 600;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    position: absolute; /* Posicionamos el pseudo-elemento */
+    width: 81%; /* Anchura del pseudo-elemento igual a la del contenedor */
+    height: 81%; /* Altura del pseudo-elemento igual a la del contenedor */
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco semitransparente */
+    opacity: 1; /* Por defecto, el recuadro blanco es invisible */
+    pointer-events: none;
+}
+
+.div_container_services:hover::before {
+    opacity: 0; /* Al hacer hover, mostramos el recuadro blanco y el texto */
+}
+
+
+
+  
