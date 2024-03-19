@@ -1,5 +1,6 @@
 body {
   background-color: #e8e8e7;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .background {
@@ -123,7 +124,6 @@ body {
   color: #333;
   margin-left: 41.5%;
   margin-top: -850px;
-  font-family: 'Courier New', Courier, monospace;
   text-align: center;
 }
 
@@ -294,6 +294,18 @@ body {
     color: white;
   }
 
+  .animated-image {
+    opacity: 0;
+    transform: translateY(50px); /* Inicialmente, mueve la imagen hacia abajo */
+    transition: opacity 1s ease, transform 1s ease; /* Agrega una transición suave */
+  }
+  
+  .animate {
+    opacity: 1;
+    transform: translateY(0); /* Cuando la imagen se desplaza hacia arriba, se muestra */
+  }
+  
+
   /* @media (max-width: 520px) {
     .section_Portfolio {
       margin-left: 250px;
@@ -408,4 +420,105 @@ body {
 
 
 
-  
+.div_container_first, .div_container_second{
+  display: flex;
+  flex-direction: column;
+}
+
+.vertical-text {
+  writing-mode: vertical-rl; /* Establece el modo de escritura vertical de derecha a izquierda */
+  text-orientation: sideways; /* Orienta el texto verticalmente con las letras mirando hacia arriba */
+  font-size: 45px;
+  color: #343a40;
+  margin-left: 13%;
+  margin-bottom: 270px;
+  transform: rotate(180deg); /* Rota el texto 180 grados para que aparezca correctamente */
+}
+
+.text_contact {
+  color: gray;
+  font-size: 13px;
+}
+
+.text_strong_contact {
+  font-size: 14px;
+  color: #343a40;
+}
+
+.container-form {
+  max-width: 600px; /* Ajusta el ancho según sea necesario */
+  margin: 0 auto; /* Centra el formulario horizontalmente */
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap; /* Permite que los elementos se ajusten automáticamente a la línea siguiente */
+}
+
+.input-wrapper {
+  flex: 0 0 48%; /* Establece el ancho de los campos de nombre y correo electrónico */
+  margin-right: 2%; /* Agrega un espacio entre los campos */
+  margin-top: 3%;
+}
+
+.input-wrapper:last-child {
+  margin-right: 0; /* Elimina el espacio entre el último campo y el botón */
+}
+
+.input-wrapper label {
+  font-size: 12px;
+  color: gray;
+  display: block; /* Muestra las etiquetas de los inputs en una línea */
+}
+
+.but-get {
+  display: block; /* Asegura que el botón esté en su propia línea */
+  margin-top: 10px; /* Espacio entre el último campo y el botón */
+}
+
+#name,
+#mail,
+#text {
+  border: transparent;
+  background-color: #e8e8e7;
+  font-size: 13px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  outline: none;
+}
+
+.button-get {
+  border: transparent;
+  background-color: #e8e8e7;
+  color: #343a40;
+  font-weight: 600;
+}
+
+.container_button_get {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 35px
+}
+
+.hr_style {
+  background-color: gray;
+}
+
+.container_footer {
+  display: flex;
+  justify-content: space-around;
+  gap: 10%;
+  height: 70px;
+  align-items: center;
+  color: gray;
+}
+
+
+.input-wrapper input:focus + .line-1 {
+  background-color: #343a40; /* Cambia el color de fondo de la línea a amarillo cuando el input está enfocado */
+  height: 1px; 
+  transition: background-color 0.8s ease, height 0.8s ease; 
+}
