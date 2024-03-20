@@ -1,17 +1,19 @@
 
+// Obtener todos los elementos de menú
+const menuItems = document.querySelectorAll('.menu li a');
 
-document.addEventListener("DOMContentLoaded", function() {
-    const menuItems = document.querySelectorAll('.menu li');
-
-    menuItems.forEach(function(item) {
-        item.addEventListener('click', function() {
-            menuItems.forEach(function(el) {
-                el.classList.remove('active');
-            });
-            item.classList.add('active');
-        });
+// Agregar un controlador de eventos a cada elemento de menú
+menuItems.forEach(item => {
+  item.addEventListener('click', () => {
+    // Eliminar la clase 'active' de todos los elementos de menú
+    menuItems.forEach(item => {
+      item.classList.remove('active');
     });
+    // Agregar la clase 'active' solo al elemento de menú seleccionado
+    item.classList.add('active');
+  });
 });
+
 
 document.addEventListener("DOMContentLoaded", function() {
     const animatedImages = document.querySelectorAll(".animated-image");
@@ -39,4 +41,14 @@ const menu = document.querySelector('.menu');
 menuToggle.addEventListener('click', () => {
     menu.classList.toggle('active'); // Alternar la clase 'active' en el menú
     menuToggle.classList.toggle('active'); // Alternar la clase 'active' en el botón de hamburguesa
+});
+
+
+// Espera a que la página esté completamente cargada
+window.addEventListener('load', function() {
+    // Oculta la pantalla de carga después de unos segundos
+    setTimeout(function() {
+        var loadingScreen = document.getElementById('loading-screen');
+        loadingScreen.classList.add('hidden');
+    }, 0.8000); // Cambia este valor (en milisegundos) para ajustar la duración de la pantalla de carga
 });

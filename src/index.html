@@ -9,16 +9,19 @@
     <title>M | Renders</title>
 </head>
 <body>
+
+    <div id="loading-screen">
+        <img src="images/update-mrenders.png" alt="Logo">
+    </div>
     
-        <div style="display: flex; justify-content: center;">
+        <div style="display: flex; justify-content: center;" id="home">
             <img class="background" src="images/homelast.jpeg" alt="Back"/>
-            <img class="background2" src="images/home_mobile1.jpeg" alt="Back"/> 
-            
-            <div class="text_description_home">
-                <span class="description">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."</span>
-            </div>
+            <img class="background2" src="images/descarga(4).jpeg" alt="Back"/> 
             <div class="text_title">
                 <h1 class="title">We show the future</h1>
+            </div>
+            <div class="text_description_home">
+                <span class="description">MRenders is a company specialized in producing photo-realistic exterior and interior images for architecture studios and real estate developers, helping them impress clients with striking images.</span>
             </div>
         </div>
         
@@ -44,7 +47,22 @@
 
         
         
-        <section class="section_Portfolio" style="box-sizing: border-box; margin-top: 150px; width: 95%; margin-left: 2%;">
+        <section id="gallery" class="section_Portfolio" style="box-sizing: border-box; margin-top: 150px; width: 95%; margin-left: 2%;">
+            <div class="column" id="hide_container_portolio">      
+                <div style="padding: 10%; margin-top: -70px; margin-bottom: 23px;">
+                    <h1 class="Text_Gallery" >Portfolio</h1>
+                    <span style="margin-top: 30px;" class="text_description">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
+                    
+                    </span>
+                    <br/>
+                    <div class="div_button_show">
+                        <button class="Button_show_more" >Show More</button>
+                    </div>
+                </div>
+                <div class="container">
+                    
+                </div>
+            </div>
             <div class="row">
                 <div class="column">
                     <div class="container">
@@ -70,7 +88,7 @@
                         <img class="animated-image" alt="photo-4" src="images/gellery5.jpeg">
                     </div>
                 </div>
-                <div class="column">      
+                <div class="column" id="hide_column_portfolio">      
                     <div style="padding: 10%; margin-top: -70px; margin-bottom: 23px;">
                         <h1 class="Text_Gallery" >Portfolio</h1>
                         <span style="margin-top: 30px;" class="text_description">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
@@ -89,7 +107,7 @@
         </section>
         
         <section>
-            <div class="div_title_services">
+            <div class="div_title_services" id="services">
                 <h2 class="title_services">Services</h2>
                 <!-- <span class="learn_more">learn more</span> -->
             </div>
@@ -109,14 +127,14 @@
             </div>
         </section>
         
-        <section style="margin-top: 100px; display: flex;">
-            <div class="container_contact_form">
+        <section  style="margin-top: 100px; display: flex;">
+            <div class="container_contact_form" id="contact">
                 <div class="container_photo_contact">
                     <img  alt="photo-contact" src="images/contact-image.png">
                 </div>
                 <div style="margin-left: 5%;">
                     <h4 style="font-size: 25px; color: #343a40; margin-top: 25px;">Info</h4>
-                        <div style="display: flex; gap: 19px; margin-top: 80px;">
+                        <div class="container_section_info">
                             <div class="div_container_first">
                                 <span class="text_contact"> Address</span>
                                 <strong class="text_strong_contact">Necochea</strong>
