@@ -33,7 +33,7 @@ body {
 }
 
 #loading-screen img {
-  width: 100px; /* Ajusta el tamaño del logo según sea necesario */
+  width: 400px; /* Ajusta el tamaño del logo según sea necesario */
 }
 
 /* Estilo para ocultar la pantalla de carga */
@@ -41,8 +41,6 @@ body {
   opacity: 0;
   pointer-events: none; /* Evita que la pantalla de carga sea clickeable */
 }
-
-
 
 .background2 {
   display: none;

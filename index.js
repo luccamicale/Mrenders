@@ -50,5 +50,26 @@ window.addEventListener('load', function() {
     setTimeout(function() {
         var loadingScreen = document.getElementById('loading-screen');
         loadingScreen.classList.add('hidden');
-    }, 0.8000); // Cambia este valor (en milisegundos) para ajustar la duración de la pantalla de carga
+    }, 2000); // Cambia este valor (en milisegundos) para ajustar la duración de la pantalla de carga
+});
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  var links = document.querySelectorAll('.menu a');
+
+  links.forEach(function(link) {
+      link.addEventListener('click', function(e) {
+          e.preventDefault();
+          var targetId = this.getAttribute('href').substr(1);
+          var targetElement = document.getElementById(targetId);
+          if (targetElement) {
+              var topOffset = targetElement.offsetTop;
+              window.scrollTo({
+                  top: topOffset,
+                  behavior: 'smooth'
+              });
+          }
+      });
+  });
 });
