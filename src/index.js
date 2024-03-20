@@ -30,3 +30,13 @@ document.addEventListener("DOMContentLoaded", function() {
     window.addEventListener("scroll", checkScroll);
   });
   
+
+// Obtener el botón de hamburguesa y el menú
+const menuToggle = document.querySelector('.menu-toggle');
+const menu = document.querySelector('.menu');
+
+// Agregar un evento de clic al botón de hamburguesa
+menuToggle.addEventListener('click', () => {
+    menu.classList.toggle('active'); // Alternar la clase 'active' en el menú
+    menuToggle.classList.toggle('active'); // Alternar la clase 'active' en el botón de hamburguesa
+});

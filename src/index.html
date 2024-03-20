@@ -11,11 +11,14 @@
 <body>
     
         <div style="display: flex; justify-content: center;">
-            <img class="background" src="images/homelast.jpeg" alt="Back"/>  
+            <img class="background" src="images/homelast.jpeg" alt="Back"/>
+            <img class="background2" src="images/home_mobile1.jpeg" alt="Back"/>  
         </div>
+        
+           
         <nav class="navbar">
-            <div class="brand">
-                <img style="width: 120px;" alt="Logo" src="images/update-mrenders.png">
+            <div class="logo">
+                <img style="width: 70px;" src="images/update-mrenders.png" alt="Logo">
             </div>
             <ul class="menu">
                 <li><a href="#home">Home</a></li>
@@ -23,16 +26,19 @@
                 <li><a href="#services">Services</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-          </nav>
-        </section>
-        <section class="section_Home_title">
-            <div class="Description_home">We specialize in creating photo-realistic exterior and interior images for architecture studios and real estate developers, helping them impress clients with striking images.</div>
-            <!-- <div class="Title">3D architectural Visualization Studio</div> 
-            
-             <button class="Button_see_gallery">See Gallery</button>  -->
+            <!-- Botón de hamburguesa para la versión móvil -->
+<button class="menu-toggle">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+</button>
+
+        </nav>
+
         </section>
         
-        <section class="section_Portfolio" style="box-sizing: border-box; margin-top: 800px; width: 95%; margin-left: 2%;">
+        
+        <section class="section_Portfolio" style="box-sizing: border-box; margin-top: 150px; width: 95%; margin-left: 2%;">
             <div class="row">
                 <div class="column">
                     <div class="container">
@@ -98,55 +104,57 @@
         </section>
         
         <section style="margin-top: 100px; display: flex;">
-            <div style="margin-left: 2%;">
-                <img style="width: 86%;" alt="photo-contact" src="images/contact-image.png">
-            </div>
-            <div style="margin-left: 7%;">
-                <h4 style="font-size: 25px; color: #343a40;">Info</h4>
-                    <div style="display: flex; gap: 100px;">
-                        <div class="div_container_first">
-                            <span class="text_contact"> Address</span>
-                            <strong class="text_strong_contact">Necochea</strong>
-                            <br>
-                            <span class="text_contact"> Location</span>
-                            <strong class="text_strong_contact" >Mar del Plata, Argentina</strong>
+            <div class="container_contact_form">
+                <div class="container_photo_contact">
+                    <img  alt="photo-contact" src="images/contact-image.png">
+                </div>
+                <div style="margin-left: 5%;">
+                    <h4 style="font-size: 25px; color: #343a40; margin-top: 25px;">Info</h4>
+                        <div style="display: flex; gap: 70px; margin-top: 100px;">
+                            <div class="div_container_first">
+                                <span class="text_contact"> Address</span>
+                                <strong class="text_strong_contact">Necochea</strong>
+                                <br>
+                                <span class="text_contact"> Location</span>
+                                <strong class="text_strong_contact" >Mar del Plata, Argentina</strong>
+                            </div>
+                            <div class="div_container_second">
+                                <span class="text_contact"> E-mail</span>
+                                <strong  class="text_strong_contact"">test@hotmail.com</strong>
+                                <br>
+                                <span class="text_contact"> WhatsApp</span>
+                                <strong class="text_strong_contact">1134638066</strong>
+                            </div>
                         </div>
-                        <div class="div_container_second">
-                            <span class="text_contact"> E-mail</span>
-                            <strong  class="text_strong_contact"">test@hotmail.com</strong>
-                            <br>
-                            <span class="text_contact"> WhatsApp</span>
-                            <strong class="text_strong_contact">1134638066</strong>
-                        </div>
-                    </div>
-                    
-                    <div>
-                        <h4 style="font-size: 25px; margin-top: 150px; color: #343a40;">Get in touch</h4>
-                        <div class="container-form">
-                            <form action="https://formspree.io/f/xknegzyn" method="POST" id="form">
-                                <div class="flex-container">
-                                    <div class="input-wrapper">
-                                        <label for="name">Your name</label>
-                                        <input type="text" id="name" name="user_name"  maxlength="30"/>
-                                        <hr class="line-1"></hr>
+                        
+                        <div>
+                            <h4 style="font-size: 25px; margin-top: 150px; color: #343a40;">Get in touch</h4>
+                            <div class="container-form">
+                                <form action="https://formspree.io/f/xknegzyn" method="POST" id="form">
+                                    <div class="flex-container">
+                                        <div class="input-wrapper">
+                                            <label for="name">Your name</label>
+                                            <input type="text" id="name" name="user_name"  maxlength="30"/>
+                                            <hr class="line-1"></hr>
+                                        </div>
+                                        <div class="input-wrapper">
+                                            <label for="mail">Your e-mail</label>
+                                            <input type="email" id="mail" name="user_email" />
+                                            <hr class="line-1"></hr>
+                                        </div>
                                     </div>
                                     <div class="input-wrapper">
-                                        <label for="mail">Your e-mail</label>
-                                        <input type="email" id="mail" name="user_email" />
+                                        <label for="text">Comment</label>
+                                        <input type="text" id="text" name="text"  />
                                         <hr class="line-1"></hr>
                                     </div>
-                                </div>
-                                <div class="input-wrapper">
-                                    <label for="text">Comment</label>
-                                    <input type="text" id="text" name="text"  />
-                                    <hr class="line-1"></hr>
-                                </div>
-                                <div class="container_button_get">
-                                    <button class="button-get" tabindex="0" type="submit" id="sub">Get in touch</button>
-                                </div>
-                            </form>
+                                    <div class="container_button_get">
+                                        <button class="button-get" tabindex="0" type="submit" id="sub">Get in touch</button>
+                                    </div>
+                                </form>
+                            </div>
                         </div>
-                    </div>
+                </div>
             </div>
 
 
