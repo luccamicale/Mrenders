@@ -4,12 +4,13 @@
   padding: 0;
   box-sizing: border-box;
   background-color: #e8e8e7;
+  font-family: Helvetica;
 }
 
 /* Estilo para el fondo de pantalla */
 body {
   
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Helvetica;
   background-position: center;
   height: 100vh; /* Hace que el fondo cubra toda la pantalla */
 }
@@ -26,6 +27,49 @@ body {
   .background {
     display: none;
   }
+}
+
+.background-container {
+  position: relative;
+  display: inline-block;
+}
+
+/* Estilos para la superposición de título y texto */
+.text_title {
+  position: absolute;
+  top: 55%; /* Centra verticalmente el contenido */
+  left: 30%; /* Centra horizontalmente el contenido */
+  transform: translate(-50%, -50%); /* Centra el contenido en el centro del contenedor */
+  text-align: center;
+  color: white;
+  background-color: transparent;
+  z-index: 1; /* Asegura que el contenido esté por encima de la imagen de fondo */
+}
+
+.title {
+  font-size: 66px;
+  margin-bottom: 20px;
+  background-color: transparent;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.text_description {
+  position: absolute;
+  top: 30%; /* Centra verticalmente el contenido */
+  left: 51%; /* Centra horizontalmente el contenido */
+  transform: translate(-50%, -50%); /* Centra el contenido en el centro del contenedor */
+  text-align: center;
+  color: white;
+  width: 20%;
+  background-color: transparent;
+  z-index: 1; /* Asegura que el contenido esté por encima de la imagen de fondo */
+}
+
+
+
+.description {
+  font-size: 18px;
+  background-color: transparent;
 }
 
 /* Estilos para el navbar */
@@ -62,7 +106,7 @@ body {
 .menu li a {
   text-decoration: none;
   color: #333; /* Color de los enlaces */
-  font-size: 18px; /* Tamaño de la fuente */
+  font-size: 16px; /* Tamaño de la fuente */
   border-bottom: 2px solid transparent; /* Establece un borde inferior transparente por defecto */
   transition: border-bottom-color 0.3s ease; /* Agrega una transición suave para el color del borde inferior */
   padding-bottom: 10px; /* Ajusta el espacio entre el texto y el borde inferior */
@@ -80,6 +124,10 @@ body {
   .navbar {
       flex-direction: column; /* Cambia el diseño del navbar a una columna en dispositivos móviles */
       padding: 10px;
+  }
+
+  .text_description {
+    display: none;
   }
 
   .menu {
@@ -121,8 +169,6 @@ body {
    
     font-size: 18px; /* Tamaño de la fuente */
     border-bottom: transparent; /* Establece un borde inferior transparente por defecto */
-    
-    
   }
   
   
@@ -280,6 +326,12 @@ body {
     margin-left: 2%;
   }
 
+  @media (max-width: 520px) {
+    .title_services {
+      font-size: 48px;
+    }
+  }
+
   .learn_more {
     font-size: 15px;
     color: #343a40;
@@ -390,7 +442,7 @@ body {
   text-orientation: sideways; /* Orienta el texto verticalmente con las letras mirando hacia arriba */
   font-size: 45px;
   color: #343a40;
-  margin-left: 13%;
+  margin-left: 16%;
   margin-bottom: 270px;
   transform: rotate(180deg); /* Rota el texto 180 grados para que aparezca correctamente */
 }
@@ -489,6 +541,13 @@ textarea:focus {
 .container_contact_form {
   display: flex;
   gap: 10px;
+  margin-left: 3%;
+}
+
+.subtitle_getintouch {
+  font-size: 25px;
+  margin-top: 130px;
+  color: #343a40;
 }
 
 .container_photo_contact {
@@ -499,7 +558,7 @@ textarea:focus {
   .container_contact_form {
     display: flex;
     flex-direction: column;
-    margin-left: 5%;
+    margin-left: 7%;
   }
 
   
@@ -523,6 +582,11 @@ textarea:focus {
   .container-form {
     width: 340px;
     margin-left: -30px;
+    margin-top: 50px;
+  }
+
+  .subtitle_getintouch {
+    margin-top: 70px;
   }
 }
 
