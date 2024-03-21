@@ -61,55 +61,30 @@ body {
   display: inline-block;
 }
 
-/* Estilos para la superposición de título y texto */
-.text_title {
+.bigTitle {
   position: absolute;
-  top: 45%; /* Centra verticalmente el contenido */
-  left: 33%; /* Centra horizontalmente el contenido */
-  transform: translate(-50%, -50%); /* Centra el contenido en el centro del contenedor */
-  text-align: center;
-  color: #343a40;
-  width: auto;
-  background-color: transparent;
-  z-index: 1; /* Asegura que el contenido esté por encima de la imagen de fondo */
-}
-
-.title {
-  font-size: 66px;
-  margin-bottom: 20px;
-  margin-left: 30px;
-  background-color: transparent;
-  text-shadow: 2px 2px 4px white;
-}
-
-
-
-.text_description_home {
-  position: absolute;
-  top: 58%; /* Centra verticalmente el contenido */
-  left: 34%; /* Centra horizontalmente el contenido */
-  transform: translate(-50%, -50%); /* Centra el contenido en el centro del contenedor */
-  text-align: left;
-  color: white;
-  width: 40%;
-  background-color: transparent;
-  z-index: 1; /* Asegura que el contenido esté por encima de la imagen de fondo */
-}
-
-
-
-.description {
-  font-size: 17px;
+  top: 200px;
+  left: 100px;
+  z-index: 2;
+  font-size: 65px;
   background-color: transparent;
   color: #343a40;
   font-weight: 100;
+  text-shadow: 2px 2px 4px white;
 }
 
-@media (max-width: 957px) {
-  .title {
-    margin-bottom: 100px;
-  }
+.subtitle_home {
+  position: absolute;
+  top: 300px;
+  left: 100px;
+  width: 55%;
+  z-index: 2;
+  font-size: 22px;
+  background-color: transparent;
+  color: #343a40;
+  font-weight: 500;
 }
+
 
 /* Estilos para el navbar */
 .navbar {
@@ -162,14 +137,8 @@ body {
       padding: 10px;
   }
 
-  .text_description_home {
+  .subtitle_home {
     display: none;
-  }
-
-  .text_title {
-    width: 330px;
-    text-align: left;
-    margin-left: 20px
   }
 
   .menu {
@@ -277,11 +246,11 @@ body {
 
   .column {
     flex: 45%;
-    padding: 7px;
+    padding: 5px;
   }
 
   .column img {
-    margin-top: 1px;
+    margin-top: 5px;
   }
 
   @media (max-width: 500px) {
@@ -290,6 +259,11 @@ body {
     }
     .row {
       flex-wrap: wrap;
+    }
+
+    .bigTitle {
+      margin-left: -70px;
+      margin-top: 25px;
     }
   }
 
@@ -327,6 +301,10 @@ body {
     border: transparent;
     width: 180px;
     transition: width 0.5s ease, background-color 0.5s ease;
+  }
+
+  .a_button_showMore {
+    background-color: transparent;
   }
 
   .div_button_show {
