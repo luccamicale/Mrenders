@@ -1,0 +1,12 @@
+.video-container {
+    position: relative;
+    width: 120%;
+    max-width: 1000px; /* Ajusta el ancho máximo según tus necesidades */
+    margin: 0 auto; /* Centra el contenedor de video horizontalmente */
+}
+
+video {
+    width: 100%; /* Hace que el video ocupe todo el ancho del contenedor */
+    height: auto; /* Ajusta automáticamente la altura para mantener la relación de aspecto */
+    display: block; /* Elimina cualquier espacio adicional alrededor del video */
+}

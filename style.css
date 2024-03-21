@@ -42,6 +42,12 @@ body {
   pointer-events: none; /* Evita que la pantalla de carga sea clickeable */
 }
 
+.background {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
 .background2 {
   display: none;
 }
@@ -75,7 +81,7 @@ body {
 
 .subtitle_home {
   position: absolute;
-  top: 280px;
+  top: 260px;
   left: 100px;
   width: 43%;
   z-index: 2;
@@ -83,6 +89,7 @@ body {
   background-color: transparent;
   color: #343a40;
   font-weight: 600;
+  text-shadow: 2px 2px 4px white;
 }
 
 
