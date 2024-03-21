@@ -392,6 +392,27 @@ body {
     height: 300px;
   }
 
+  
+
+  .div_container_services {
+    width: 100%;
+    padding: 2.5%;
+    margin-top: 25px;
+    position: relative; /* Agregamos posición relativa */
+  }
+
+  @media (max-width: 850px) {
+    .div_container_services {
+      width: 40%;
+      height: 400px;
+      margin-top: 120px;
+    }
+
+    .img_services {
+      height: 400px;
+    }
+  }
+
   @media (max-width: 1200px) {
     .div_main_container_services {
       display: flex;
@@ -400,32 +421,14 @@ body {
     }
 
     .div_container_services {
-      width: 80%;
-      height: 850px;
+      width: 100%;
+      height: 350px;
+      margin-top: 160px;
     }
 
     .img_services {
-      height: 850px;
+      height: 350px;
     }
-  }
-
-  @media (max-width: 850px) {
-    .div_container_services {
-      width: 40%;
-      height: 400px;
-      
-    }
-
-    .img_services {
-      height: 400px;
-    }
-  }
-  
-  .div_container_services {
-    width: 100%;
-    padding: 2.5%;
-    margin-top: 25px;
-    position: relative; /* Agregamos posición relativa */
   }
 
 
@@ -461,7 +464,7 @@ body {
     line-height: 1;
     position: absolute; /* Posicionamos el pseudo-elemento */
     width: 81%; /* Anchura del pseudo-elemento igual a la del contenedor */
-    height: 81%; /* Altura del pseudo-elemento igual a la del contenedor */
+    height: 86%; /* Altura del pseudo-elemento igual a la del contenedor */
     background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco semitransparente */
     opacity: 1; /* Por defecto, el recuadro blanco es invisible */
     pointer-events: none;
@@ -682,4 +685,26 @@ textarea:focus {
       right: 20px;
       z-index: 999;
   }
+}
+
+.span_text_services {
+  font-size: 12px;
+  color: gray;
+  font-weight: 100;
+}
+
+.container_text_small_services {
+  display: flex;
+  margin-top: 10px;
+}
+
+.text_p_Time {
+  font-size: 13px;
+  color: #343a40;
+}
+
+.strong_text_days {
+  color: #343a40;
+  font-size: 13px;
+  font-weight: 400;
 }
