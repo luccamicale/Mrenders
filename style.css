@@ -63,10 +63,10 @@ body {
 
 .bigTitle {
   position: absolute;
-  top: 200px;
+  top: 160px;
   left: 100px;
   z-index: 2;
-  font-size: 65px;
+  font-size: 75px;
   background-color: transparent;
   color: #343a40;
   font-weight: 100;
@@ -75,14 +75,14 @@ body {
 
 .subtitle_home {
   position: absolute;
-  top: 300px;
+  top: 280px;
   left: 100px;
-  width: 55%;
+  width: 43%;
   z-index: 2;
-  font-size: 22px;
+  font-size: 17px;
   background-color: transparent;
   color: #343a40;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 
@@ -264,6 +264,7 @@ body {
     .bigTitle {
       margin-left: -70px;
       margin-top: 25px;
+      font-weight: 500;
     }
   }
 
