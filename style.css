@@ -601,6 +601,17 @@ textarea:focus {
   color: gray;
 }
 
+@media (max-width: 768px) {
+  .container_footer {
+    display: flex;
+  gap: 2%;
+  height: 70px;
+  justify-content: center;
+  color: gray;
+  margin-left: -75px;
+  }
+}
+
 
 .container_contact_form {
   display: flex;
@@ -759,3 +770,4 @@ textarea:focus {
     margin-top: 200px;
   }
 }
+
