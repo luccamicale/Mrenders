@@ -205,6 +205,47 @@ body {
     display: inline-block;
     overflow: hidden; /* Esto asegurará que el pseudo-elemento no se desborde */
   }
+
+  #container_photo_6 {
+    margin-top: 7px;
+  }
+
+
+  @media (min-width: 2000px) {
+    #container_photo_6 {
+      margin-top: 40px;
+    }
+  }
+
+  @media (min-width: 2100px) {
+    #container_photo_6 {
+      margin-top: 53px;
+    }
+  }
+  
+  @media (min-width: 2200px) {
+    #container_photo_6 {
+      margin-top: 63px;
+    }
+  }
+
+  @media (min-width: 2300px) {
+    #container_photo_6 {
+      margin-top: 73px;
+    }
+  } 
+
+  @media (min-width: 2400px) {
+    #container_photo_6 {
+      margin-top: 83px;
+    }
+  } 
+
+  @media (min-width: 2500px) {
+    #container_photo_6 {
+      margin-top: 94px;
+    }
+  }
   
   img {
     width: 100%;
@@ -250,7 +291,9 @@ body {
   .column {
     flex: 45%;
     padding: 5px;
-  }
+    overflow: hidden; /* Evita que el contenido desborde del contenedor */
+}
+
 
   .column img {
     margin-top: 5px;
@@ -469,8 +512,8 @@ body {
     justify-content: center;
     line-height: 1;
     position: absolute; /* Posicionamos el pseudo-elemento */
-    width: 81%; /* Anchura del pseudo-elemento igual a la del contenedor */
-    height: 86%; /* Altura del pseudo-elemento igual a la del contenedor */
+    width: 83%; /* Anchura del pseudo-elemento igual a la del contenedor */
+    height: 85%; /* Altura del pseudo-elemento igual a la del contenedor */
     background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco semitransparente */
     opacity: 1; /* Por defecto, el recuadro blanco es invisible */
     pointer-events: none;
@@ -771,3 +814,6 @@ textarea:focus {
   }
 }
 
+.space {
+  margin-right: 5px; /* Ajusta el valor según el espacio que desees */
+}
