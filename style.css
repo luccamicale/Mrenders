@@ -205,6 +205,7 @@ body {
     display: inline-block;
     overflow: hidden; /* Esto asegurará que el pseudo-elemento no se desborde */
   }
+  
 
   #container_photo_6 {
     margin-top: 7px;
