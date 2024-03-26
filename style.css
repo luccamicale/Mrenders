@@ -421,12 +421,6 @@ body {
     }
   }
 
-  .learn_more {
-    font-size: 15px;
-    color: #343a40;
-    margin-top: 90px;
-  }
-
   .div_title_services {
     display: flex;
     gap: 70%;
