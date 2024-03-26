@@ -274,7 +274,9 @@ body {
     align-items: center;
     justify-content: center;
     line-height: 1;
-  }
+    pointer-events: none; /* Permite que los clics pasen a través del pseudo-elemento */
+}
+
   
   .container:hover::before {
     opacity: 1;
